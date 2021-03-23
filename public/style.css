@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-weight: 300;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-family: 'Heebo', sans-serif;
+}
+
+.btn {
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+
+.text {
+    opacity: 0.8;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.container {
+    min-height: 100vh;
+}
+
+.recipe-wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+}
+#recipe {
+    margin: 2.4rem 0;
+}
+.recipe-item {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.79);
+    margin: 2rem 0;
+}
+
+.recipe-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    padding: 1rem;
+}
+.recipe-img img {
+    height: 200px;
+    width: 200px;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+}
+.recipe-name h3 {
+    font-size: 1.4rem;
+}
+.recipe-btn {
+    text-decoration: none;
+    color: #fff;
+    background: #963632;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+    display: block;
+    width: 175px;
+    margin: 1rem auto;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.recipe-btn:hover {
+    background: #963632;
+}
+
+/* Recipe Details modal */
+.recipe-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    color: #fff;
+    background: #963632;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    width: 90%;
+    height: 90%;
+    display: none;
+}
+
+.showRecipe {
+    display: block;
+}
+
+.recipe-details-content {
+    margin: 2rem;
+}
+.recipe-details-content p:not(.recipe-description) {
+    padding: 1rem 0;
+}
+.recipe-header {
+    background: #fff;
+    color: #963632;
+    text-align: left;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    margin: 1rem 0 1rem 7rem;
+}
+.recipe-close-btn {
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+    font-size: 0.9rem;
+    background: #f6d9af;
+    border: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+}
+.recipe-title {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding-top: 0.5rem;
+    margin: 0 1rem;
+}
+.recipe-description {
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+    margin: 0 1rem;
+    display: block;
+}
+.recipe-details-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 0.3rem;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    -ms-border-radius: 0.3rem;
+    -o-border-radius: 0.3rem;
+    margin: 0 auto;
+    display: block;
+    float: left;
+}
+.recipe-content {
+    text-align: left;
+}
+.recipe-ingredient-item,
+.recipe-direction-item {
+    list-style-type: disclosure-closed;
+    font-weight: 400;
+    margin: 0 1.2rem;
+}
+.recipe-special-item {
+    list-style-type: disc;
+    margin: 0 2.3rem;
+    font-weight: 400;
+    font-style: italic;
+}
+.recipe-ingredients {
+    background: #fff;
+    color: #963632;
+    font-weight: 600;
+    border-radius: 0 0 0.3rem 0.3rem;
+    -webkit-border-radius: 0 0 0.3rem 0.3rem;
+    -moz-border-radius: 0 0 0.3rem 0.3rem;
+    -ms-border-radius: 0 0 0.3rem 0.3rem;
+    -o-border-radius: 0 0 0.3rem 0.3rem;
+    display: inline-block;
+    padding: 1rem;
+}
+.recipe-directions {
+    background: #fff;
+    color: #963632;
+    font-weight: 600;
+    border-radius: 0 0 0.3rem 0.3rem;
+    -webkit-border-radius: 0 0 0.3rem 0.3rem;
+    -moz-border-radius: 0 0 0.3rem 0.3rem;
+    -ms-border-radius: 0 0 0.3rem 0.3rem;
+    -o-border-radius: 0 0 0.3rem 0.3rem;
+    display: inline-block;
+    padding: 1rem;
+}
+
+/* Tab styles */
+.tab {
+    overflow: hidden;
+}
+.tab button {
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    border-radius: 0.3rem 0.3rem 0 0;
+    -webkit-border-radius: 0.3rem 0.3rem 0 0;
+    -moz-border-radius: 0.3rem 0.3rem 0 0;
+    -ms-border-radius: 0.3rem 0.3rem 0 0;
+    -o-border-radius: 0.3rem 0.3rem 0 0;
+    width: 50%;
+}
+.tab button:hover {
+    background-color: #ffedd3;
+}
+.tab button.active {
+    background-color: #f6d9af;
+    font-weight: 600;
+}
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    height: 435px;
+    overflow-y: scroll;
+}
+.tabcontent::-webkit-scrollbar {
+    width: 10px;
+}
+.tabcontent::-webkit-scrollbar-thumb {
+    background: #f0f0f0;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.notFound {
+    grid-template-columns: 1fr !important;
+    color: #963632;
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 100%;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    #recipe-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .recipe-item {
+        margin: 0;
+    }
+    .recipe-details {
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    #recipe-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
