@@ -32,9 +32,22 @@ function getRecipeList() {
                     html += `
                     <div class="recipe-item" data-id="${data[i].uuid}">
                         <div class="recipe">
+                    `;
+
+                    // Recipes uploaded by a user won't have any images.
+                    // if (data[i].images) {
+                    html += `
                             <div class="recipe-img">
-                                <img src=".${data[i].images.small}">
+                                <img src=".${
+                                    data[i].images
+                                        ? data[i].images.small
+                                        : '/img/blanktable.png'
+                                }">
                             </div>
+                            `;
+                    // }
+
+                    html += `
                             <div class="recipe-name">
                                 <h3>${data[i].title}</h3>
                                 <a href="#" class="recipe-btn">Get Recipe</a>
@@ -43,6 +56,21 @@ function getRecipeList() {
                     </div>
                     `;
                 }
+
+                // Add one more set of divs for a blank placeholder entry.
+                html += `
+                <div class="recipe-item" data-id="New Recipe">
+                    <div class="recipe">
+                        <div class="recipe-img">
+                            <img src="./img/blanktable.png">
+                        </div>
+                        <div class="recipe-name">
+                            <h3>New recipe?</h3>
+                            <a href="#" class="recipe-btn">Click Here</a>
+                        </div>
+                    </div>
+                </div>
+                `;
 
                 recipeList.classList.remove('notFound');
             } else {
@@ -121,7 +149,9 @@ function recipeModal(recipe) {
             let html = `
                 <div>
                     <div class="recipe-details-img">
-                        <img src=".${r.images.small}" alt="" />
+                        <img src=".${
+                            r.images ? r.images.small : '/img/blanktable.png'
+                        }" alt="" />
                     </div>
                     <div class="recipe-header">
                         <h2 class="recipe-title">${r.title}</h2>

@@ -480,6 +480,32 @@
           "optional": false
         }
       ]
+    },
+    {
+      "title": "Test Recipe",
+      "description": "A delicious test recipe",
+      "ingredients": [
+        {
+          "amount": 1,
+          "measurement": "bag",
+          "name": "magic beans"
+        }
+      ],
+      "directions": [
+        {
+          "instructions": "Sell your cow at the market",
+          "optional": false
+        },
+        {
+          "instructions": "Plant beans in the ground",
+          "optional": false
+        },
+        {
+          "instructions": "Watch out for giants!",
+          "optional": true
+        }
+      ],
+      "uuid": "mleuVc3"
     }
   ],
   "specials": [
