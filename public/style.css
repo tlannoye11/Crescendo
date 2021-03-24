@@ -139,7 +139,9 @@ body {
     -ms-border-radius: 0.3rem;
     -o-border-radius: 0.3rem;
     margin: 1rem 0 1rem 7rem;
-    min-height: 90px;
+    height: 90px;
+    overflow: hidden;
+    position: relative;
 }
 .recipe-close-btn {
     position: absolute;
@@ -147,6 +149,7 @@ body {
     top: 0.6rem;
     font-size: 0.9rem;
     background: #f6d9af;
+    color: #963632;
     border: none;
     width: 20px;
     height: 20px;
@@ -163,14 +166,20 @@ body {
 .recipe-title {
     font-weight: 600;
     letter-spacing: 1px;
-    padding-top: 0.5rem;
-    margin: 0 1rem;
+    padding-top: 0.3rem;
+    margin: 0.1rem 2.5rem 0 1rem;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
 }
 .recipe-description {
     font-weight: 400;
-    padding-bottom: 0.5rem;
-    margin: 0 1rem;
-    display: block;
+    margin: -0.3rem 2.5rem 0 1rem;
+    display: inline-block;
+    height: 30px;
+    width: 100%;
+    overflow: hidden;
 }
 .recipe-details-img img {
     width: 90px;
@@ -193,12 +202,14 @@ body {
     list-style-type: disclosure-closed;
     font-weight: 400;
     margin: 0 1.2rem;
+    position: relative;
 }
 .recipe-special-item {
     list-style-type: disc;
-    margin: 0 2.3rem;
+    margin: 0 1.2rem 0 2.4rem;
     font-weight: 400;
     font-style: italic;
+    position: relative;
 }
 .recipe-ingredients {
     background: #fff;
@@ -223,6 +234,43 @@ body {
     -o-border-radius: 0 0 0.3rem 0.3rem;
     display: inline-block;
     padding: 1rem;
+    position: relative;
+}
+
+/* Icon styles */
+.add-icon {
+    background: #f6d9af;
+    color: #861e1a;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    position: absolute;
+    top: 0.25rem;
+    right: -0.5rem;
+}
+.edit-header-icon {
+    color: #861e1a;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    padding: 0.5rem;
+    visibility: hidden;
+}
+.edit-icon {
+    color: #861e1a;
+    position: absolute;
+    top: -0.25rem;
+    right: -2.25rem;
+    padding: 0.75rem;
+    visibility: hidden;
+}
+.recipe-header:hover i,
+.recipe-ingredient-item:hover i,
+.recipe-direction-item:hover i,
+.recipe-special-item:hover i {
+    visibility: visible;
 }
 
 /* Tab styles */
@@ -256,6 +304,7 @@ body {
     border: 1px solid #ccc;
     border-top: none;
     height: 435px;
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 .tabcontent::-webkit-scrollbar {
@@ -268,6 +317,9 @@ body {
     -moz-border-radius: 2rem;
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
+}
+.tabcontent h3 {
+    position: relative;
 }
 
 .notFound {
